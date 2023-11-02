@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area Converter (Yards to Square Feet)</title>
+</head>
+<body>
+    <h1>Area Converter (Yards to Square Feet)</h1>
+    <form>
+        <label for="yards">Enter Area in Yards:</label>
+        <input type="number" id="yards" placeholder="Enter Yards" required>
+        <input type="button" value="Convert" onclick="convertAreaYardsToSqFeet()">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function convertAreaYardsToSqFeet() {
+            const yards = parseFloat(document.getElementById("yards").value);
+            const sqFeet = yards * 9; // 1 Yard = 9 Square Feet
+            document.getElementById("result").textContent = `Area in Square Feet: ${sqFeet.toFixed(2)} sq. ft`;
+        }
+    </script>
+</body>
+</html>
